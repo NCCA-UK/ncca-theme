@@ -1,0 +1,674 @@
+/*
+Theme Name:     NCCA UK
+Theme URI:      http://themeforest.net/item/udesign-responsive-wordpress-theme/253220
+Description:    Child theme for the Andon Design uDesign theme
+Author:         Tom Frearson
+Author URI:     http://themeforest.net/user/AndonDesign
+Template:       u-design
+Version:        1.0
+*/
+
+@import url(../u-design/style.css);
+@import url(//hello.myfonts.net/count/297bb6);
+
+@font-face
+{
+  font-family:EtelkaMedium;
+  src:url(fonts/297bb6_2_0.eot);
+  src:url(fonts/297bb6_2_0.eot?#iefix) format(embedded-opentype), url(fonts/297bb6_2_0.woff) format(woff), url(fonts/297bb6_2_0.ttf) format(truetype);
+}
+
+@font-face
+{
+  font-family:handsean;
+  src:url(fonts/handsean.eot);
+  src:url(fonts/handsean.eot?#iefix) format(embedded-opentype), url(fonts/handsean.woff) format(woff), url(fonts/handsean.ttf) format(truetype);
+}
+
+/* General */
+body
+{
+  color:#455560
+}
+
+h1,h2,h3,h4,h5,h6,p,li,a
+{
+  font-family:EtelkaMedium;
+}
+
+p,li
+{
+  font-size:15px
+}
+
+h3,a
+{
+  color:#9c6c9d
+}
+
+a:hover, h1 a:hover, h2 a:hover, h3 a:hover
+{
+  color:#e88b2c!important
+}
+
+p.tight
+{
+  padding:0
+}
+
+.entry
+{
+  font:normal 15px EtelkaMedium
+}
+
+#top-wrapper,#bottom-bg,#footer-bg
+{
+  background-color:#9c6c9d
+}
+
+#wrapper-1
+{
+  background-color:#fff
+}
+
+#before-content
+{
+  background-color:#fff;
+  padding:0
+}
+
+/* Buttons */
+.button, .button.donate
+{
+  display:block;
+  margin:15px auto;
+  color:#fff;
+  background:#e88b2c;
+  font:normal 15px EtelkaMedium;
+  border:0;
+  border-radius:10px;
+  padding:10px 15px;
+  cursor:pointer
+}
+
+.donate-link
+{
+  font:normal 15px EtelkaMedium;
+  background:none;
+  border:0;
+  padding:0;
+  cursor:pointer
+}
+
+.button.left
+{
+  float:left
+}
+
+.button.right
+{
+  float:right
+}
+
+/* Header */
+#slogan
+{
+  color:#fff;
+  font-family:handsean;
+  line-height:1.3em;
+  width:300px
+}
+
+#top-elements .social_media_top
+{
+  margin-top:-7px
+}
+
+/* Header menu */
+#flyout
+{
+  float:right
+}
+
+#flyout a
+{
+  color:#fff
+}
+
+/* Main menu */
+.sf-with-ul:after
+{
+  visibility:hidden
+}
+
+#navigation-menu ul.sf-menu > li
+{
+  margin:-2px 0 0 -4px
+}
+
+#navigation-menu ul.sf-menu > li > a > span
+{
+  color:#fff
+}
+
+#navigation-menu ul.sf-menu > li > a:hover
+{
+  background-color:#decede
+}
+
+#navigation-menu ul.sf-menu > li > a:hover span
+{
+  color:#455560!important
+}
+
+#navigation-menu ul.sf-menu > li.current-menu-item,#navigation-menu ul.sf-menu > li.current-menu-ancestor
+{
+  background:url(/wp-content/uploads/2014/01/main-menu-underline.jpg) no-repeat bottom!important
+}
+
+#navigation-menu ul.sf-menu > li.current-menu-item > a > span
+{
+  color:#fff
+}
+
+/* Sub main menu */
+ul.sub-menu
+{
+  margin-top:2px
+}
+
+.sf-menu a,.sf-menu a:visited
+{
+  color:#9c6c9d!important
+}
+
+.sf-menu a:hover
+{
+  color:#455560!important
+}
+
+.sf-menu li li
+{
+  background:none;
+  background-color:#decede;
+  opacity:0.90;
+  -webkit-opacity:0.90;
+  -moz-opacity:0.90;
+  filter:alpha(opacity=90)
+}
+
+/* Revslider */
+.revslider-home p,.revslider-home a
+{
+  color:#fff
+}
+
+.revslider-home p
+{
+  line-height:23px
+}
+
+.revslider-home .revslider-blurb
+{
+  width:210px
+}
+
+.rev_slider .tp-caption,.rev_slider .caption
+{
+  white-space:normal!important
+}
+
+.tp-leftarrow
+{
+  background:url(/wp-content/uploads/2014/01/rev-arrow-left.jpg) no-repeat 0 0 rgba(0,0,0,0)!important
+}
+
+.tp-rightarrow
+{
+  background:url(/wp-content/uploads/2014/01/rev-arrow-right.jpg) no-repeat 0 0 rgba(0,0,0,0)!important
+}
+
+.tp-bullets.simplebullets.round .bullet,.tp-bullets.simplebullets.round .bullet:hover
+{
+  background:url(/wp-content/uploads/2014/01/bullet-lilac.jpg) no-repeat left top #fff
+}
+
+.tp-bullets.simplebullets.round .bullet.selected
+{
+  background:url(/wp-content/uploads/2014/01/bullet-purple.jpg) no-repeat left -1px #fff
+}
+
+/* Main content */
+.top-of-page a
+{
+  top:-5px
+}
+
+a.read-more-align-left,a.read-more-align-right
+{
+  float:right
+}
+
+a.read-more-align-left span,a.read-more-align-right span
+{
+  font:inherit
+}
+
+/* Social events */
+#after-cont-row-1 .after_cont_row_1
+{
+  float:left;
+  width:29.33%;
+  margin:0 2%
+}
+
+/* Social events - mobile */
+@media screen and max-width 959px {
+  #after-cont-row-1 .after_cont_row_1
+  {
+    width:100%
+  }
+}
+
+/* Facebook */
+.fts-jal-fb-group-display
+{
+  overflow:auto;
+  font-family:EtelkaMedium
+}
+
+.fts-jal-fb-group-header-desc
+{
+  display:none
+}
+
+.fts-jal-fb-message
+{
+  font-size:13px
+}
+
+/* Twitter */
+.fts-twitter-div
+{
+  overflow:auto;
+  font-family:EtelkaMedium
+}
+
+.fts-twitter-text
+{
+  font-size:13px
+}
+
+/* Social links */
+.ncca-social-icon,.ncca-social-icon img
+{
+  float:left;
+  margin-right:14px;
+  margin-bottom:20px
+}
+
+#ncca-newsletter
+{
+  max-width:360px
+}
+
+#signup-heading
+{
+  float:left
+}
+
+#signup-heading p
+{
+  font:normal 15px EtelkaMedium;
+  color:#fff;
+  padding:0
+}
+
+#signup-form
+{
+  float:left
+}
+
+/* Newsletter form */
+#ncca-newsletter .frm_forms.with_frm_style
+{
+  max-width:270px!important;
+  max-height:100px
+}
+
+#ncca-newsletter .with_frm_style .form-field
+{
+  margin-bottom:10px!important
+}
+
+#ncca-newsletter .frm_submit
+{
+  position:relative;
+/*this needs to be absolute but needs different reference*/
+  bottom:76px;
+  left:205px
+}
+
+#ncca-newsletter .with_frm_style .frm_submit input[type=submit]
+{
+  color:#fff!important;
+  border:0!important;
+  background:url(/wp-content/themes/ncca/images/arrow-trans.gif) no-repeat center right!important;
+  box-shadow:none!important
+}
+
+#ncca-newsletter .with_frm_style .frm_message,.with_frm_style .frm_error_style
+{
+  font:normal 15px EtelkaMedium;
+  padding:0 10px!important
+}
+
+#ncca-newsletter .with_frm_style .frm_error_style
+{
+  font-size:15px;
+  padding:5px 10px 8px!important
+}
+
+#ncca-newsletter .with_frm_style .frm_error
+{
+  font:normal 13px/14px EtelkaMedium!important;
+  color:#fff!important
+}
+
+/* Home page */
+.home #page-content-title
+{
+  display:none
+}
+
+.home #home-page-content
+{
+  background:url(/wp-content/themes/ncca/images/main-content-bg-left-600.gif), url(/wp-content/themes/ncca/images/main-content-bg-right-600.gif), url(/wp-content/themes/ncca/images/main-content-bg-mid-600.gif);
+  background-position:top left, top right, top center;
+  background-repeat:no-repeat, no-repeat, repeat-x
+}
+
+.home-page-content-ie8 #home-page-content
+{
+  background-color:#decede;
+  background-image:url(/wp-content/themes/ncca/images/home-page-content-bottom.jpg);
+  background-repeat:no-repeat;
+  background-position:0 100%;
+  height:625px;
+  z-index:-10
+}
+
+.home-page-content-ie8 #home-page-content:before
+{
+  content:'';
+  background-image:url(/wp-content/themes/ncca/images/home-page-content-top.jpg);
+  background-repeat:no-repeat;
+  background-position:right top;
+  height:30px;
+  display:block;
+  z-index:1;
+  position:relative
+}
+
+.home-page-content-ie8 #home-page-content:after
+{
+  content:'';
+  background-image:url(/wp-content/themes/ncca/images/home-page-content-bottom.jpg);
+  background-repeat:no-repeat;
+  background-position:0 50%;
+  height:114px;
+  display:block;
+  z-index:1;
+  position:absolute
+}
+
+.home #content-container .cont_col_1,.home #content-container .cont_col_2,.home #content-container .cont_col_3,.home #content-container .cont_col_4,.home #content-container .after_cont_row_1,.home #content-container .after_cont_row_2
+{
+  margin-bottom:30px
+}
+
+.home #cont-box-2,.home #cont-box-3
+{
+  margin-top:47px
+}
+
+.home ul.small-thumb li
+{
+  height:420px;
+  padding:0;
+  background:#fff
+}
+
+.home .small-custom-frame-wrapper,.home .custom-frame-inner-wrapper
+{
+  margin:0;
+  border:0
+}
+
+.home .frame-shadow
+{
+  box-shadow:none
+}
+
+.home .custom-frame-wrapper .custom-frame-padding,.home .small-custom-frame-wrapper .custom-frame-padding
+{
+  padding:0;
+  border:0
+}
+
+.home ul.small-thumb .teaser-title,.home ul.small-thumb .date-author,.home ul.small-thumb .teaser-content,.home a.read-more-align-right
+{
+  display:inline-block;
+  padding:2px 15px
+}
+
+.home ul.small-thumb .teaser-title
+{
+  font-size:17px;
+  padding-top:10px
+}
+
+.home ul.small-thumb .date-author
+{
+  margin:0
+}
+
+.home ul.small-thumb .date-author a
+{
+  font-size:11px
+}
+
+.home a.read-more-align-left span,a.read-more-align-right span
+{
+  font:normal 12px EtelkaMedium
+}
+
+/* Donations */
+.pagetitle
+{
+  display:none
+}
+
+.pagetitle.donate
+{
+  display:inline
+}
+
+.wpdonations-form
+{
+  background:#fae2ca;
+  padding:10px 30px;
+  border-radius:20px
+}
+
+.wpdonations-form h2
+{
+  margin-bottom:20px
+}
+
+.wpdonations-form,.wpdonations-form input,.wpdonations-form select,.wpdonations-form text-area,.wpdonations-error
+{
+  font:normal 15px EtelkaMedium
+}
+
+.wpdonations-form input,.wpdonations-form select,.wpdonations-form text-area
+{
+  border:0;
+  padding:10px;
+  border-radius:10px
+}
+
+.wpdonations-form input.button
+{
+  display:block;
+  margin:0 auto
+}
+
+.wpdonations-form fieldset
+{
+  line-height:1.4em
+}
+
+.wpdonations-form fieldset.fieldset-donation_campaign,.wpdonations-form fieldset.fieldset-campaign_title
+{
+  display:none
+}
+
+.wpdonations-form fieldset.fieldset-recurring_donation
+{
+  display:block!important
+}
+
+.wpdonations-form fieldset small,.wpdonations-form fieldset small.description,.wpdonations-form fieldset small.checkbox-description,.wpdonations-form fieldset label small
+{
+  font-size:13px;
+  line-height:1.4em
+}
+
+.wpdonations-form fieldset small.description
+{
+  margin:0.2em 0 0 0
+}
+
+.wpdonations-form fieldset .account-sign-in .button
+{
+  background:none;
+  margin:0;
+  padding:0
+}
+
+/* Donation progress */
+.progress.striped .bar
+{
+  background-color:#e88b2c!important
+}
+
+/* Donation preview */
+.donation_preview.single_donation
+{
+  background:#fae2ca;
+  padding:10px 40px 1px;
+  border-radius:20px
+}
+
+.single_donation p
+{
+  margin-left:15px
+}
+
+.single_donation .donor, .single_donation .donor .name
+{
+  margin:0;
+  padding:0
+}
+
+.single_donation .meta li.date-posted
+{
+  margin-top:1px
+}
+
+/* Donations dashboard */
+.wpdonations-donations
+{
+  border-collapse:separate;
+  border-spacing:10px;
+  margin:0 auto
+}
+
+.wpdonations-donations th, .wpdonations-donations td
+{
+  padding:5px
+}
+
+/* WooCommerce */
+.woocommerce-ordering select
+{
+  font:normal 15px EtelkaMedium
+}
+
+/* Footer widgets */
+#bottom .widget_nav_menu li,#bottom .widget_nav_menu li a,.custom-formatting li,.custom-formatting li a
+{
+  background:none!important
+}
+
+#bottom .widget_nav_menu li a,.custom-formatting li a,.bottom-col-title
+{
+  color:#ccc!important;
+  padding-left:0
+}
+
+.bottom-col-title
+{
+  margin-top:3px
+}
+
+#bottom .widget_nav_menu li a:hover,.custom-formatting li a:hover
+{
+  color:#455560
+}
+
+#bottom .custom-formatting ul ul li a
+{
+  padding-left:0!important
+}
+
+/* Footer */
+#footer-bg
+{
+  min-height:65px
+}
+
+.footer-top
+{
+  border-top:solid 1px #fff;
+  padding-top:10px
+}
+
+#footer_text
+{
+  float:none
+}
+
+#footer_text,#footer_text a
+{
+  color:#fff
+}
+
+#footer_text p,#footer_text a
+{
+  font-size:10px;
+  line-height:1em;
+  padding:0
+}
+
+#copyright
+{
+  float:left
+}
+
+#legal
+{
+  float:right;
+  margin-top:15px!important
+}
