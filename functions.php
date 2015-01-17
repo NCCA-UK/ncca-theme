@@ -8,11 +8,11 @@ if( !defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 include_once( ABSPATH . 'wp-admin/includes/plugin.php' );
 
 if( is_plugin_active( 'wpdonations/wpdonations.php' ) ) {
-	locate_template( '/includes/ncca-wpdonations.php', true, true );
+	locate_template( '/wpdonations/ncca-wpdonations.php', true, true );
 }
 
 if( is_plugin_active( 'woocommerce/woocommerce.php' ) ) {
-	locate_template( '/includes/ncca-woocommerce.php', true, true );
+	locate_template( '/woocommerce/ncca-woocommerce.php', true, true );
 }
 
 /**
