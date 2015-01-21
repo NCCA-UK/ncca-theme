@@ -5,7 +5,7 @@ Description:    Child theme for the Andon Design uDesign theme
 Author:         Tom Frearson
 Author URI:     http://themeforest.net/user/AndonDesign
 Template:       u-design
-Version:        1.0
+Version:        1.1
 */
 
 @import url(../u-design/style.css);
@@ -252,6 +252,26 @@ a.read-more-align-left,a.read-more-align-right
 a.read-more-align-left span,a.read-more-align-right span
 {
   font:inherit
+}
+
+/* Featured images */
+.custom-frame-inner-wrapper
+{
+  border:0;
+  background-color:none;
+  background:none
+}
+
+.custom-frame-wrapper .custom-frame-padding a img, .small-custom-frame-wrapper .custom-frame-padding a img
+{
+  border-radius:75px
+}
+
+.custom-frame-wrapper .custom-frame-padding a img:hover, .small-custom-frame-wrapper .custom-frame-padding a img:hover
+{
+  opacity:1;
+  -webkit-transform:none;
+  transform:none
 }
 
 /* Social events */
