@@ -65,6 +65,22 @@ function trim_title( $title ) {
 
 
 /**
+ * Insert featured image thumbnail into single Appeal and Journey Pages
+ */
+function ncca_insert_thumbnail( $content ) {
+	if( ( is_singular( 'appeal' ) || is_singular( 'journey' ) ) && has_post_thumbnail() ) {
+		$content .= the_post_thumbnail( 'thumbnail', array( 'class' => 'thumbnail alignleft' ) );
+			
+		return $content;
+	} else {
+			
+		return $content;
+	}
+}
+add_filter( 'the_content', 'ncca_insert_thumbnail', 0 );
+
+
+/**
  * Replace the default WordPress search form with a HTML5 version
  */
 function html5_search_form( $form ) {
