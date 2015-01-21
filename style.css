@@ -80,6 +80,7 @@ p.tight
 /* Buttons */
 .button, .button.donate
 {
+  clear:both;
   display:block;
   margin:15px auto;
   color:#fff;
