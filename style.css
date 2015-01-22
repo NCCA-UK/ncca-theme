@@ -33,7 +33,7 @@ body
 
 h1,h2,h3,h4,h5,h6,p,li,a
 {
-  font-family:EtelkaMedium;
+  font-family:EtelkaMedium
 }
 
 p,li
@@ -46,7 +46,7 @@ h3,a
   color:#9c6c9d
 }
 
-a:hover, h1 a:hover, h2 a:hover, h3 a:hover
+a:hover,h1 a:hover,h2 a:hover,h3 a:hover
 {
   color:#e88b2c!important
 }
@@ -78,17 +78,18 @@ p.tight
 }
 
 /* Buttons */
-.button, .button.donate
+.button,.button.donate
 {
   clear:both;
   display:block;
+  max-width:320px;
   margin:15px auto;
   color:#fff;
   background:#e88b2c;
-  font:normal 15px EtelkaMedium;
+  font:normal 19px EtelkaMedium;
   border:0;
-  border-radius:10px;
-  padding:10px 15px;
+  border-radius:32px;
+  padding:17px 20px;
   cursor:pointer
 }
 
@@ -263,12 +264,12 @@ a.read-more-align-left span,a.read-more-align-right span
   background:none
 }
 
-.custom-frame-wrapper .custom-frame-padding a img, .small-custom-frame-wrapper .custom-frame-padding a img
+.custom-frame-wrapper .custom-frame-padding a img
 {
   border-radius:75px
 }
 
-.custom-frame-wrapper .custom-frame-padding a img:hover, .small-custom-frame-wrapper .custom-frame-padding a img:hover
+.custom-frame-wrapper .custom-frame-padding a img:hover
 {
   opacity:1;
   -webkit-transform:none;
@@ -505,11 +506,6 @@ a.read-more-align-left span,a.read-more-align-right span
 }
 
 /* Donations */
-.pagetitle
-{
-  display:none
-}
-
 .pagetitle.donate
 {
   display:inline
@@ -527,22 +523,16 @@ a.read-more-align-left span,a.read-more-align-right span
   margin-bottom:20px
 }
 
-.wpdonations-form,.wpdonations-form input,.wpdonations-form select,.wpdonations-form text-area,.wpdonations-error
+.wpdonations-form,.wpdonations-form input[type=text],.wpdonations-form select,.wpdonations-form text-area,.wpdonations-error
 {
   font:normal 15px EtelkaMedium
 }
 
-.wpdonations-form input,.wpdonations-form select,.wpdonations-form text-area
+.wpdonations-form input[type=text],.wpdonations-form select,.wpdonations-form text-area
 {
   border:0;
   padding:10px;
   border-radius:10px
-}
-
-.wpdonations-form input.button
-{
-  display:block;
-  margin:0 auto
 }
 
 .wpdonations-form fieldset
@@ -568,7 +558,7 @@ a.read-more-align-left span,a.read-more-align-right span
 
 .wpdonations-form fieldset small.description
 {
-  margin:0.2em 0 0 0
+  margin:.2em 0 0
 }
 
 .wpdonations-form fieldset .account-sign-in .button
@@ -597,7 +587,7 @@ a.read-more-align-left span,a.read-more-align-right span
   margin-left:15px
 }
 
-.single_donation .donor, .single_donation .donor .name
+.single_donation .donor,.single_donation .donor .name
 {
   margin:0;
   padding:0
@@ -616,7 +606,7 @@ a.read-more-align-left span,a.read-more-align-right span
   margin:0 auto
 }
 
-.wpdonations-donations th, .wpdonations-donations td
+.wpdonations-donations th,.wpdonations-donations td
 {
   padding:5px
 }
