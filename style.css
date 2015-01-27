@@ -248,7 +248,8 @@ ul.sub-menu
 
 a.read-more-align-left,a.read-more-align-right
 {
-  float:right
+  float:right;
+  margin-bottom:10px
 }
 
 a.read-more-align-left span,a.read-more-align-right span
@@ -277,46 +278,34 @@ a.read-more-align-left span,a.read-more-align-right span
 }
 
 /* Social events */
+#after-cont-row-1
+{
+  background-color:#fff
+}
+
 #after-cont-row-1 .after_cont_row_1
 {
   float:left;
   width:29.33%;
-  margin:0 2%
+  margin:0 2%;
 }
 
 /* Social events - mobile */
-@media screen and max-width 959px {
+@media screen and (max-width: 959px) {
   #after-cont-row-1 .after_cont_row_1
   {
     width:100%
   }
 }
 
-/* Facebook */
-.fts-jal-fb-group-display
+/* Facebook and Twitter */
+.fts-jal-fb-group-display,.fts-jal-fb-group-header-desc,.fts-twitter-div
 {
-  overflow:auto;
-  font-family:EtelkaMedium
+  overflow:hidden;
+  font:normal 15px EtelkaMedium
 }
 
-.fts-jal-fb-group-header-desc
-{
-  display:none
-}
-
-.fts-jal-fb-message
-{
-  font-size:13px
-}
-
-/* Twitter */
-.fts-twitter-div
-{
-  overflow:auto;
-  font-family:EtelkaMedium
-}
-
-.fts-twitter-text
+.fts-jal-fb-message,.fts-twitter-text
 {
   font-size:13px
 }
@@ -367,8 +356,8 @@ a.read-more-align-left span,a.read-more-align-right span
 {
   position:relative;
 /*this needs to be absolute but needs different reference*/
-  bottom:76px;
-  left:205px
+  bottom:73px;
+  left:212px
 }
 
 #ncca-newsletter .with_frm_style .frm_submit input[type=submit]
@@ -376,7 +365,7 @@ a.read-more-align-left span,a.read-more-align-right span
   color:#fff!important;
   border:0!important;
   background:url(/wp-content/themes/ncca/images/arrow-trans.gif) no-repeat center right!important;
-  box-shadow:none!important
+  box-shadow:none!important;
 }
 
 #ncca-newsletter .with_frm_style .frm_message,.with_frm_style .frm_error_style
@@ -405,60 +394,17 @@ a.read-more-align-left span,a.read-more-align-right span
 
 .home #home-page-content
 {
-  background:url(/wp-content/themes/ncca/images/main-content-bg-left-600.gif), url(/wp-content/themes/ncca/images/main-content-bg-right-600.gif), url(/wp-content/themes/ncca/images/main-content-bg-mid-600.gif);
-  background-position:top left, top right, top center;
-  background-repeat:no-repeat, no-repeat, repeat-x
-}
-
-.home-page-content-ie8 #home-page-content
-{
   background-color:#decede;
-  background-image:url(/wp-content/themes/ncca/images/home-page-content-bottom.jpg);
-  background-repeat:no-repeat;
-  background-position:0 100%;
-  height:625px;
-  z-index:-10
-}
-
-.home-page-content-ie8 #home-page-content:before
-{
-  content:'';
-  background-image:url(/wp-content/themes/ncca/images/home-page-content-top.jpg);
-  background-repeat:no-repeat;
-  background-position:right top;
-  height:30px;
-  display:block;
-  z-index:1;
-  position:relative
-}
-
-.home-page-content-ie8 #home-page-content:after
-{
-  content:'';
-  background-image:url(/wp-content/themes/ncca/images/home-page-content-bottom.jpg);
-  background-repeat:no-repeat;
-  background-position:0 50%;
-  height:114px;
-  display:block;
-  z-index:1;
-  position:absolute
-}
-
-.home #content-container .cont_col_1,.home #content-container .cont_col_2,.home #content-container .cont_col_3,.home #content-container .cont_col_4,.home #content-container .after_cont_row_1,.home #content-container .after_cont_row_2
-{
-  margin-bottom:30px
-}
-
-.home #cont-box-2,.home #cont-box-3
-{
-  margin-top:47px
+  padding-top:23px
 }
 
 .home ul.small-thumb li
 {
-  height:420px;
+  min-height:480px;
+  margin-bottom:40px;
   padding:0;
-  background:#fff
+  background:#fff;
+  border:solid 1px #decede
 }
 
 .home .small-custom-frame-wrapper,.home .custom-frame-inner-wrapper
@@ -505,6 +451,14 @@ a.read-more-align-left span,a.read-more-align-right span
   font:normal 12px EtelkaMedium
 }
 
+/* Home page - mobile */
+@media screen and (max-width: 959px) {
+  #content
+  {
+    
+  }
+}
+
 /* Donations */
 .pagetitle.donate
 {
@@ -523,12 +477,12 @@ a.read-more-align-left span,a.read-more-align-right span
   margin-bottom:20px
 }
 
-.wpdonations-form,.wpdonations-form input[type=text],.wpdonations-form select,.wpdonations-form text-area,.wpdonations-error
+.wpdonations-form,.wpdonations-form input[type=text],.wpdonations-form,.wpdonations-form input[type=email],.wpdonations-form select,.wpdonations-form text-area,.wpdonations-error
 {
   font:normal 15px EtelkaMedium
 }
 
-.wpdonations-form input[type=text],.wpdonations-form select,.wpdonations-form text-area
+.wpdonations-form input[type=text],.wpdonations-form input[type=email],.wpdonations-form select,.wpdonations-form text-area
 {
   border:0;
   padding:10px;
@@ -563,6 +517,7 @@ a.read-more-align-left span,a.read-more-align-right span
 
 .wpdonations-form fieldset .account-sign-in .button
 {
+  font-size:15px;
   background:none;
   margin:0;
   padding:0
