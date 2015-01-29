@@ -15,14 +15,14 @@ Version:        1.1
 {
   font-family:EtelkaMedium;
   src:url(fonts/297bb6_2_0.eot);
-  src:url(fonts/297bb6_2_0.eot?#iefix) format(embedded-opentype), url(fonts/297bb6_2_0.woff) format(woff), url(fonts/297bb6_2_0.ttf) format(truetype);
+  src:url(fonts/297bb6_2_0.eot?#iefix) format(embedded-opentype),url(fonts/297bb6_2_0.woff) format(woff),url(fonts/297bb6_2_0.ttf) format(truetype);
 }
 
 @font-face
 {
   font-family:handsean;
   src:url(fonts/handsean.eot);
-  src:url(fonts/handsean.eot?#iefix) format(embedded-opentype), url(fonts/handsean.woff) format(woff), url(fonts/handsean.ttf) format(truetype);
+  src:url(fonts/handsean.eot?#iefix) format(embedded-opentype),url(fonts/handsean.woff) format(woff),url(fonts/handsean.ttf) format(truetype);
 }
 
 /* General */
@@ -38,7 +38,8 @@ h1,h2,h3,h4,h5,h6,p,li,a
 
 p,li
 {
-  font-size:15px
+  font-size:15px;
+  line-height:23px;
 }
 
 h3,a
@@ -75,6 +76,14 @@ p.tight
 {
   background-color:#fff;
   padding:0
+}
+
+/* General - mobile */
+@media screen and (max-width:719px) {
+  #bottom-bg
+  {
+    text-align:center
+  }
 }
 
 /* Buttons */
@@ -138,6 +147,11 @@ p.tight
 }
 
 /* Main menu */
+#main-menu select.selectnav
+{
+  font-family:EtelkaMedium
+}
+
 .sf-with-ul:after
 {
   visibility:hidden
@@ -145,12 +159,13 @@ p.tight
 
 #navigation-menu ul.sf-menu > li
 {
-  margin:-2px 0 0 -4px
+  margin-top:-2px;
+  margin-right:5px
 }
 
-#navigation-menu ul.sf-menu > li > a > span
+#navigation-menu ul.sf-menu > li > a
 {
-  color:#fff
+  padding-right:0
 }
 
 #navigation-menu ul.sf-menu > li > a:hover
@@ -158,9 +173,20 @@ p.tight
   background-color:#decede
 }
 
+#navigation-menu ul.sf-menu > li > a > span
+{
+  color:#fff;
+  padding:10px 20px
+}
+
 #navigation-menu ul.sf-menu > li > a:hover span
 {
   color:#455560!important
+}
+
+#navigation-menu ul.sf-menu > li > a.sf-with-ul,#navigation-menu ul.sf-menu > li > a.sf-with-ul:hover
+{
+  padding-right:0
 }
 
 #navigation-menu ul.sf-menu > li.current-menu-item,#navigation-menu ul.sf-menu > li.current-menu-ancestor
@@ -171,6 +197,15 @@ p.tight
 #navigation-menu ul.sf-menu > li.current-menu-item > a > span
 {
   color:#fff
+}
+
+
+/* Main menu - mobile */
+@media screen and (min-width:720px)
+{
+  #navigation-menu {
+    left:-26px
+  }
 }
 
 /* Sub main menu */
@@ -205,6 +240,12 @@ ul.sub-menu
   color:#fff
 }
 
+.revslider-home a:hover
+{
+  color:#fff!important;
+  text-decoration:underline
+}
+
 .revslider-home p
 {
   line-height:23px
@@ -212,7 +253,9 @@ ul.sub-menu
 
 .revslider-home .revslider-blurb
 {
-  width:210px
+  width:87%;
+  height:17em;
+  overflow:hidden
 }
 
 .rev_slider .tp-caption,.rev_slider .caption
@@ -280,7 +323,9 @@ a.read-more-align-left span,a.read-more-align-right span
 /* Social events */
 #after-cont-row-1
 {
-  background-color:#fff
+  background-color:#fff;
+  margin-bottom:40px;
+  padding-bottom:10px
 }
 
 #after-cont-row-1 .after_cont_row_1
@@ -291,10 +336,10 @@ a.read-more-align-left span,a.read-more-align-right span
 }
 
 /* Social events - mobile */
-@media screen and (max-width: 959px) {
+@media screen and (max-width:959px) {
   #after-cont-row-1 .after_cont_row_1
   {
-    width:100%
+    width:96%
   }
 }
 
@@ -338,6 +383,14 @@ a.read-more-align-left span,a.read-more-align-right span
 #signup-form
 {
   float:left
+}
+
+/* Social links - mobile */
+@media screen and (max-width:719px) {
+  .ncca-social-icon
+  {
+    width:100%
+  }
 }
 
 /* Newsletter form */
@@ -398,6 +451,11 @@ a.read-more-align-left span,a.read-more-align-right span
   padding-top:23px
 }
 
+.one_fourth,.one_third,.one_half,.two_third,.three_fourth
+{
+  margin-bottom:0
+}
+
 .home ul.small-thumb li
 {
   min-height:480px;
@@ -452,7 +510,7 @@ a.read-more-align-left span,a.read-more-align-right span
 }
 
 /* Home page - mobile */
-@media screen and (max-width: 959px) {
+@media screen and (max-width:959px) {
   #content
   {
     
@@ -575,7 +633,8 @@ a.read-more-align-left span,a.read-more-align-right span
 /* Footer widgets */
 #bottom .widget_nav_menu li,#bottom .widget_nav_menu li a,.custom-formatting li,.custom-formatting li a
 {
-  background:none!important
+  background:none!important;
+  /*margin-bottom:10px*/ /* Mobile UX? */
 }
 
 #bottom .widget_nav_menu li a,.custom-formatting li a,.bottom-col-title
