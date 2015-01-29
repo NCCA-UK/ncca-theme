@@ -62,11 +62,11 @@ if ( $udesign_options['remove_blog_sidebar'] == 'yes' ) $content_position = 'gri
             } else {
                 $blog_posts_query_args = "cat=0&paged=$paged";
             }
-			
+            
+            /* NCCA set query args here */
+	    $blog_posts_query_args = "category_name=latest-news&paged=$paged";
+
             $blog_posts_query = new WP_Query( $blog_posts_query_args );
-			
-			/* Set custom post type here */
-			$blog_posts_query = new WP_Query( 'category_name=latest-news' );
 
             if ($blog_posts_query->have_posts()) :
 		while ($blog_posts_query->have_posts()) : $blog_posts_query->the_post(); ?>
