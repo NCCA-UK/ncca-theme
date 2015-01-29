@@ -65,8 +65,8 @@ if ( $udesign_options['remove_blog_sidebar'] == 'yes' ) $content_position = 'gri
 			
             $blog_posts_query = new WP_Query( $blog_posts_query_args );
 			
-			/* Set custom post type here */
-			$blog_posts_query = new WP_Query( array( 'post_type' => 'appeal' ) );
+	    /* NCCA set query here */
+	    $blog_posts_query = new WP_Query( array( 'post_type' => 'appeal', 'paged' => $paged ) );
 
             if ($blog_posts_query->have_posts()) :
 		while ($blog_posts_query->have_posts()) : $blog_posts_query->the_post(); ?>
