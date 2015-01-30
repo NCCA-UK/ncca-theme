@@ -6,6 +6,15 @@
 if( !defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 
 /**
+ * Add support for post thumbnails
+ */
+function ncca_theme_setup() {
+	add_theme_support( 'post-thumbnails', array( 'appeal', 'journey' ) );
+}
+add_action( 'after_setup_theme', 'ncca_theme_setup' );
+
+
+/**
  * Load scripts and styles
  */
 /*function ncca_load_scripts() {
