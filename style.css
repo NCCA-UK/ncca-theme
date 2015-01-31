@@ -5,24 +5,23 @@ Description:    Child theme for the Andon Design uDesign theme
 Author:         Tom Frearson
 Author URI:     http://themeforest.net/user/AndonDesign
 Template:       u-design
-Version:        1.1
+Version:        1.2
 */
 
 @import url(../u-design/style.css);
-@import url(//hello.myfonts.net/count/297bb6);
 
 @font-face
 {
   font-family:EtelkaMedium;
-  src:url(fonts/297bb6_2_0.eot);
-  src:url(fonts/297bb6_2_0.eot?#iefix) format(embedded-opentype),url(fonts/297bb6_2_0.woff) format(woff),url(fonts/297bb6_2_0.ttf) format(truetype);
+  src:url(/fonts/297bb6_2_0.eot);
+  src:url(/fonts/297bb6_2_0.eot?#iefix) format(embedded-opentype),url(/fonts/297bb6_2_0.woff) format(woff),url(/fonts/297bb6_2_0.ttf) format(truetype);
 }
 
 @font-face
 {
   font-family:handsean;
-  src:url(fonts/handsean.eot);
-  src:url(fonts/handsean.eot?#iefix) format(embedded-opentype),url(fonts/handsean.woff) format(woff),url(fonts/handsean.ttf) format(truetype);
+  src:url(/fonts/handsean-webfont.eot);
+  src:url(/fonts/handsean-webfont.eot?#iefix) format(embedded-opentype),url(/fonts/handsean-webfont.woff2) format(woff2),url(/fonts/handsean-webfont.woff) format(woff),url(/fonts/handsean-webfont.ttf) format(truetype),url(/fonts/handsean-webfont.svg#hand_of_seanregular) format(svg);
 }
 
 /* General */
@@ -74,8 +73,7 @@ p.tight
 
 #before-content
 {
-  background-color:#fff;
-  padding:0
+  background-color:#fff
 }
 
 /* General - mobile */
@@ -152,15 +150,10 @@ p.tight
   font-family:EtelkaMedium
 }
 
-.sf-with-ul:after
-{
-  visibility:hidden
-}
-
 #navigation-menu ul.sf-menu > li
 {
   margin-top:-2px;
-  margin-right:5px
+  margin-right:3px
 }
 
 #navigation-menu ul.sf-menu > li > a
@@ -168,7 +161,7 @@ p.tight
   padding-right:0
 }
 
-#navigation-menu ul.sf-menu > li > a:hover
+#navigation-menu ul.sf-menu > li.sfHover > a,#navigation-menu ul.sf-menu > li > a:hover
 {
   background-color:#decede
 }
@@ -179,6 +172,11 @@ p.tight
   padding:10px 20px
 }
 
+#navigation-menu ul.sf-menu > li.sfHover > a > span
+{
+  color:#9c6c9d
+}
+
 #navigation-menu ul.sf-menu > li > a:hover span
 {
   color:#455560!important
@@ -187,11 +185,6 @@ p.tight
 #navigation-menu ul.sf-menu > li > a.sf-with-ul,#navigation-menu ul.sf-menu > li > a.sf-with-ul:hover
 {
   padding-right:0
-}
-
-#navigation-menu ul.sf-menu > li.current-menu-item,#navigation-menu ul.sf-menu > li.current-menu-ancestor
-{
-  background:url(/wp-content/uploads/2014/01/main-menu-underline.jpg) no-repeat bottom!important
 }
 
 #navigation-menu ul.sf-menu > li.current-menu-item > a > span
@@ -221,6 +214,12 @@ ul.sub-menu
   margin-top:2px
 }
 
+.sf-menu li li
+{
+  background:none;
+  background-color:#decede
+}
+
 .sf-menu a,.sf-menu a:visited
 {
   color:#9c6c9d!important
@@ -229,16 +228,6 @@ ul.sub-menu
 .sf-menu a:hover
 {
   color:#455560!important
-}
-
-.sf-menu li li
-{
-  background:none;
-  background-color:#decede;
-  opacity:0.90;
-  -webkit-opacity:0.90;
-  -moz-opacity:0.90;
-  filter:alpha(opacity=90)
 }
 
 /* Revslider */
@@ -308,16 +297,22 @@ a.read-more-align-left span,a.read-more-align-right span
 }
 
 /* Featured images */
+.alignleft,img.alignleft,a img.alignleft
+{
+  margin:11px 14px 2px 0
+}
+
+.appeal .custom-frame img,.journey .custom-frame img
+{
+  border-radius:75px
+}
+
+/* 'Get The Image' thumbnails */
 .custom-frame-inner-wrapper
 {
   border:0;
   background-color:none;
   background:none
-}
-
-.custom-frame-wrapper .custom-frame-padding a img
-{
-  border-radius:75px
 }
 
 .custom-frame-wrapper .custom-frame-padding a img:hover
@@ -362,12 +357,17 @@ a.read-more-align-left span,a.read-more-align-right span
   font-size:13px
 }
 
+.fts-jal-fb-user-name
+{
+  color:#666;
+}
+
 /* Social links */
 .ncca-social-icon,.ncca-social-icon img
 {
   float:left;
   margin-right:14px;
-  margin-bottom:20px
+  margin-bottom:10px
 }
 
 #ncca-newsletter
@@ -389,7 +389,8 @@ a.read-more-align-left span,a.read-more-align-right span
 
 #signup-form
 {
-  float:left
+  float:left;
+  max-height:80px
 }
 
 /* Social links - mobile */
@@ -403,8 +404,7 @@ a.read-more-align-left span,a.read-more-align-right span
 /* Newsletter form */
 #ncca-newsletter .frm_forms.with_frm_style
 {
-  max-width:270px!important;
-  max-height:100px
+  max-width:270px!important
 }
 
 #ncca-newsletter .with_frm_style .form-field
@@ -533,8 +533,7 @@ a.read-more-align-left span,a.read-more-align-right span
 .wpdonations-form
 {
   background:#fae2ca;
-  padding:10px 30px;
-  border-radius:20px
+  padding:10px 30px
 }
 
 .wpdonations-form h2
@@ -551,7 +550,6 @@ a.read-more-align-left span,a.read-more-align-right span
 {
   border:0;
   padding:10px;
-  border-radius:10px
 }
 
 .wpdonations-form fieldset
@@ -598,8 +596,7 @@ a.read-more-align-left span,a.read-more-align-right span
 .donation_preview.single_donation
 {
   background:#fae2ca;
-  padding:10px 40px 1px;
-  border-radius:20px
+  padding:10px 40px 1px
 }
 
 .single_donation p
@@ -641,10 +638,9 @@ a.read-more-align-left span,a.read-more-align-right span
 #bottom .widget_nav_menu li,#bottom .widget_nav_menu li a,.custom-formatting li,.custom-formatting li a
 {
   background:none!important;
-  /*margin-bottom:10px*/ /* Mobile UX? */
 }
 
-#bottom .widget_nav_menu li a,.custom-formatting li a,.bottom-col-title
+#bottom .widget_nav_menu li a,#bottom .custom-formatting li a,.bottom-col-title
 {
   color:#ccc!important;
   padding-left:0
@@ -655,9 +651,9 @@ a.read-more-align-left span,a.read-more-align-right span
   margin-top:3px
 }
 
-#bottom .widget_nav_menu li a:hover,.custom-formatting li a:hover
+#bottom .widget_nav_menu li a:hover,#bottom .custom-formatting li a:hover
 {
-  color:#455560
+  color:#fff!important
 }
 
 #bottom .custom-formatting ul ul li a
