@@ -9,18 +9,9 @@ if( !defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
  * Add support for post thumbnails
  */
 function ncca_theme_setup() {
-	add_theme_support( 'post-thumbnails', array( 'appeal', 'journey' ) );
+	add_theme_support( 'post-thumbnails', array( 'post', 'page', 'appeal', 'journey' ) );
 }
 add_action( 'after_setup_theme', 'ncca_theme_setup' );
-
-
-/**
- * Load scripts and styles
- */
-/*function ncca_load_scripts() {
-	
-}
-add_action( 'wp_enqueue_scripts', 'ncca_load_scripts' );*/
 
 
 /**
@@ -56,53 +47,23 @@ function ncca_header_menu() {
 
 
 /**
- * Trim the title
+ * Add 'terms and conditions' to the bottom of Journey Pages
  */
-function trim_title( $title ) {
-	$title = get_the_title();
-	$limit = "10";
-	$pad = "...";
-	if( strlen( $title ) <= $limit ) {
+function ncca_add_journey_terms() {
+	$query = new WP_Query( 'pagename=journeys/terms-and-conditions' );
 	
-		return $title;
-	} else {
-		$title = substr( $title, 0, $limit ) . $pad;
-		
-		return $title;
+	if( is_singular( 'journey' ) && $query->have_posts() ) {
+		echo '<div class="divider"></div>';
+		while( $query->have_posts() ) {
+			$query->the_post();
+				the_title();
+				the_content();
+		}
 	}
-}
-
-
-/**
- * Insert featured image thumbnail into single Appeal and Journey Pages
- */
-function ncca_insert_thumbnail( $content ) {
-	if( ( is_singular( 'appeal' ) || is_singular( 'journey' ) ) && has_post_thumbnail() ) {
-		$content .= the_post_thumbnail( 'thumbnail', array( 'class' => 'thumbnail alignleft' ) );
-			
-		return $content;
-	} else {
-			
-		return $content;
-	}
-}
-add_filter( 'the_content', 'ncca_insert_thumbnail', 0 );
-
-
-/**
- * Replace the default WordPress search form with a HTML5 version
- */
-function html5_search_form( $form ) {
-	$form = '
-		<form role="search" method="get" id="searchform" action="' . home_url( '/' ) . '" >
-			<label class="assistive-text" for="s">' . __('Search for:') . '</label>
-			<input type="search" placeholder="'.__("Enter term...").'" value="' . get_search_query() . '" name="s" id="s" />
-			<input type="submit" id="searchsubmit" value="Search" />
-		</form>';
 	
-	return $form;
+	wp_reset_postdata();
 }
-//add_filter( 'get_search_form', 'html5_search_form' );
+add_action( 'udesign_single_post_entry_bottom', 'ncca_add_journey_terms', 2 );
 
 
 /**
