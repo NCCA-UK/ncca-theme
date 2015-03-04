@@ -26,6 +26,28 @@ add_action( 'wp_head', 'ncca_add_favicon' );
 
 
 /**
+ * Style the login page
+ */
+function ncca_login_style() {
+    echo '
+		<style type="text/css">
+			body.login
+			{
+			  background:#9c6c9d
+			}
+			
+			body.login #login h1 a
+			{
+			  background:url(/wp-content/uploads/2014/05/logo-resp-h150.gif) no-repeat 0 100%;
+			  width:225px;
+			  height:157px
+			}
+		</style>';
+}
+add_action( 'login_enqueue_scripts', 'ncca_login_style' );
+
+
+/**
  * Header flyout menu
  */
 function ncca_header_menu() {
