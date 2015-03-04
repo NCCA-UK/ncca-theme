@@ -13,20 +13,23 @@ Version:        1.2
 @font-face
 {
   font-family:EtelkaMedium;
-  src:url(/fonts/297bb6_2_0.eot);
-  src:url(/fonts/297bb6_2_0.eot?#iefix) format(embedded-opentype),url(/fonts/297bb6_2_0.woff) format(woff),url(/fonts/297bb6_2_0.ttf) format(truetype);
+  src:url(fonts/297bb6_2_0.eot?) format(eot),
+	  url(fonts/297bb6_2_0.woff) format(woff),
+	  url(fonts/297bb6_2_0.ttf) format(truetype);
 }
 
 @font-face
 {
   font-family:handsean;
-  src:url(/fonts/handsean-webfont.eot);
-  src:url(/fonts/handsean-webfont.eot?#iefix) format(embedded-opentype),url(/fonts/handsean-webfont.woff2) format(woff2),url(/fonts/handsean-webfont.woff) format(woff),url(/fonts/handsean-webfont.ttf) format(truetype),url(/fonts/handsean-webfont.svg#hand_of_seanregular) format(svg);
+  src:url(fonts/handsean-webfont.eot?) format(eot),
+	  url(fonts/handsean-webfont.woff) format(woff),
+	  url(fonts/handsean-webfont.ttf) format(truetype);
 }
 
 /* General */
 body
 {
+  font-family:EtelkaMedium;
   color:#455560
 }
 
@@ -93,11 +96,29 @@ p.tight
   margin:15px auto;
   color:#fff;
   background:#e88b2c;
+  -moz-box-shadow:inset 0px 1px 0px 0px #fce2c1;
+  -webkit-box-shadow:inset 0px 1px 0px 0px #fce2c1;
+  box-shadow:inset 0px 1px 0px 0px #fce2c1;
+  -moz-border-radius:32px;
+  -webkit-border-radius:32px;
+  border-radius:40px;
+  border:1px solid #eeb44f;
+  text-shadow:0px 1px 0px #cc9f52;
   font:normal 19px EtelkaMedium;
-  border:0;
-  border-radius:32px;
-  padding:17px 20px;
-  cursor:pointer
+  padding:15px 30px;
+  cursor:pointer;
+  white-space:normal
+}
+
+.button:hover,.button.donate:hover
+{
+  background:#fb9e25
+}
+
+.button:active,.button.donate:active
+{
+  position:relative;
+  top:1px
 }
 
 .donate-link
@@ -116,7 +137,21 @@ p.tight
 
 .button.right
 {
-  float:right
+  float:right;
+  clear:none
+}
+
+/* Login */
+body.login
+{
+  background:#9c6c9d
+}
+
+.login h1 a
+{
+  background:url(/wp-content/uploads/2014/01/logo.gif) no-repeat 0 100%;
+  width:225px;
+  height:157px
 }
 
 /* Header */
@@ -294,6 +329,12 @@ a.read-more-align-left,a.read-more-align-right
 a.read-more-align-left span,a.read-more-align-right span
 {
   font:inherit
+}
+
+/* Sidebar */
+#sidebarSubnav h3
+{
+  font-size:17px!important
 }
 
 /* Featured images */
@@ -583,7 +624,8 @@ a.read-more-align-left span,a.read-more-align-right span
   font-size:15px;
   background:none;
   margin:0;
-  padding:0
+  padding:0;
+  border:0
 }
 
 /* Donation progress */
@@ -628,6 +670,11 @@ a.read-more-align-left span,a.read-more-align-right span
   padding:5px
 }
 
+#wpdonations-donation-dashboard table tr:hover ul.donation-dashboard-actions
+{
+  visibility:hidden
+}
+
 /* WooCommerce */
 .woocommerce-ordering select
 {
@@ -635,12 +682,12 @@ a.read-more-align-left span,a.read-more-align-right span
 }
 
 /* Footer widgets */
-#bottom .widget_nav_menu li,#bottom .widget_nav_menu li a,.custom-formatting li,.custom-formatting li a
+#bottom .widget_nav_menu li,#bottom .widget_nav_menu li a,.custom-formatting li,.custom-formatting li a,#bottom .loginform li,#bottom .loginform li a
 {
   background:none!important;
 }
 
-#bottom .widget_nav_menu li a,#bottom .custom-formatting li a,.bottom-col-title
+#bottom .widget_nav_menu li a,#bottom .custom-formatting li a,.bottom-col-title,#bottom .loginform li a
 {
   color:#ccc!important;
   padding-left:0
@@ -651,7 +698,7 @@ a.read-more-align-left span,a.read-more-align-right span
   margin-top:3px
 }
 
-#bottom .widget_nav_menu li a:hover,#bottom .custom-formatting li a:hover
+#bottom .widget_nav_menu li a:hover,#bottom .custom-formatting li a:hover,#bottom .loginform li a:hover,#bottom .loginform
 {
   color:#fff!important
 }
@@ -659,6 +706,12 @@ a.read-more-align-left span,a.read-more-align-right span
 #bottom .custom-formatting ul ul li a
 {
   padding-left:0!important
+}
+
+.form-row input.input-text
+{
+ color:#455560!important;
+ font:normal 15px EtelkaMedium
 }
 
 /* Footer */
