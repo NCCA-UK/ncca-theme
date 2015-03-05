@@ -6,6 +6,23 @@
 if( !defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 
 /**
+ * Enqueue scripts
+ */
+function ncca_load_scripts() {
+	if( is_page( 'donate' ) ) {
+		wp_enqueue_script(
+			'ncca_theme',
+			get_stylesheet_directory_uri() . '/scripts/theme-mods.js',
+			array( 'jquery' ),
+			false,
+			true
+		);
+	}
+}
+add_action('wp_enqueue_scripts', 'ncca_load_scripts');
+
+
+/**
  * Add support for post thumbnails
  */
 function ncca_theme_setup() {
