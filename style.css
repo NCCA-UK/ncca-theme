@@ -132,13 +132,23 @@ p.tight
 
 .button.left
 {
-  float:left
+  margin:20px 0
 }
 
 .button.right
 {
-  float:right;
-  clear:none
+  position:absolute;
+  right:22px;
+  top:42px
+}
+
+/* Buttons - mobile */
+@media screen and (max-width:479px)
+{
+  .button.right
+  {
+    position:inherit
+  }
 }
 
 /* Login */
