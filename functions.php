@@ -70,7 +70,7 @@ add_action( 'login_enqueue_scripts', 'ncca_login_style' );
 function ncca_header_menu() {
 	echo '
 		<div id="flyout">
-			<div id="flyout-inner">
+			<div id="flyout-search">
 			<form role="search" method="get" id="searchform" action="' . $_SERVER['PHP_SELF'] . '" _lpchecked="1">
 				<div><label style="display:none" class="screen-reader-text" for="s">Search for:</label>
 					<input type="text" value="" name="s" id="s" placeholder="Type here to search">
@@ -78,11 +78,15 @@ function ncca_header_menu() {
 				</div>
 			</form>
 			</div>
-			<p><a id="flyout-1" href="mailto:info@ncca-uk.org" title="Email"><span class="flyout">Email</span></a></p>
-			<p><a id="flyout-2" href="/shop/" title="Shop"><span class="flyout">Shop</span></a></p>
+			<div id="flyout-email">
+				<a class="flyout-email" href="mailto:info@ncca-uk.org" title="Email us: info@ncca-uk.org"><span class="flyout">Email us: info@ncca-uk.org</span></a>
+			</div>
+			<div id="flyout-shop">
+				<a class="flyout-shop" href="/shop/" title="Visit our online shop"><span class="flyout">Visit our online shop</span></a>
+			</div>
 		</div>';
 }
-//add_action( 'udesign_top_wrapper_top', 'ncca_header_menu' );
+add_action( 'udesign_top_wrapper_top', 'ncca_header_menu' );
 
 
 /**
