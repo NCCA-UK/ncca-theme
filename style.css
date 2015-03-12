@@ -181,12 +181,95 @@ body.login
 /* Header menu */
 #flyout
 {
-  float:right
+  float:right;
+  margin-top:10px
 }
 
 #flyout a
 {
+  display:block;
+  position:relative;
+  left:59px;
+  height:27px;
+  top:1px;
+  width:221px;
+  padding:8px 0;
+  text-align:center;
+  background:#7a3c7b;
+  font-size:15px;
   color:#fff
+}
+
+#flyout a:hover
+{
+  color:#fff!important
+}
+
+#flyout-shop,#flyout-email,#flyout-search
+{
+  display:block;
+  position:relative;
+  right:-221px;
+  width:280px;
+  height:50px;
+}
+
+#flyout-shop
+{
+  background:url(/wp-content/themes/ncca/images/utility-shop.jpg) 0 0 no-repeat
+}
+
+#flyout-email
+{
+  background:url(/wp-content/themes/ncca/images/utility-email.jpg) 0 0 no-repeat
+}
+
+#flyout-search
+{
+  background:url(/wp-content/themes/ncca/images/utility-search.jpg) 0 0 no-repeat
+}
+
+#flyout-shop:hover,#flyout-email:hover,#flyout-search:hover
+{
+  right:0;
+  color:#fff
+}
+
+#flyout #searchform
+{
+  position:relative;
+  left:59px;
+  top:2px;
+  height:40px;
+  padding-top:3px;
+  padding-left:3px;
+  background:#7a3c7b
+}
+
+#flyout #s
+{
+  width:196px;
+  margin-top:4px;
+  padding:2px 8px;
+  font:inherit;
+  font-size:15px;
+  border:0;
+  border-radius:2px
+}
+
+#flyout #searchsubmit
+{
+  position:relative;
+  top:3px;
+  right:31px;
+  width:25px;
+  background:url(/wp-content/themes/ncca/images/arrow-trans.gif) no-repeat center right;
+  border:0
+}
+
+#flyout #searchsubmit
+{
+  cursor:pointer
 }
 
 /* Main menu */
