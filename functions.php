@@ -26,7 +26,7 @@ add_action('wp_enqueue_scripts', 'ncca_load_scripts');
  * Add support for post thumbnails
  */
 function ncca_theme_setup() {
-	add_theme_support( 'post-thumbnails', array( 'post', 'page', 'appeal', 'journey' ) );
+	add_theme_support( 'post-thumbnails', array( 'post', 'page', 'appeal', 'journey', 'in-memory', 'wishes' ) );
 }
 add_action( 'after_setup_theme', 'ncca_theme_setup' );
 
