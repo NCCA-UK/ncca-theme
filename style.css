@@ -5,7 +5,7 @@ Description:    Child theme for the Andon Design uDesign theme
 Author:         Tom Frearson
 Author URI:     http://themeforest.net/user/AndonDesign
 Template:       u-design
-Version:        1.2
+Version:        1.3
 */
 
 @import url(../u-design/style.css);
@@ -29,13 +29,13 @@ Version:        1.2
 /* General */
 body
 {
-  font-family:EtelkaMedium;
+  font-family:'Open Sans', Arial, sans-serif;
   color:#455560
 }
 
 h1,h2,h3,h4,h5,h6,p,li,a
 {
-  font-family:EtelkaMedium
+  font-family:'Open Sans', Arial, sans-serif;
 }
 
 p,li
@@ -61,7 +61,7 @@ p.tight
 
 .entry
 {
-  font:normal 15px EtelkaMedium
+  font:normal 15px 'Open Sans', Arial, sans-serif
 }
 
 #top-wrapper,#bottom-bg,#footer-bg
@@ -104,7 +104,7 @@ p.tight
   border-radius:40px;
   border:1px solid #eeb44f;
   text-shadow:0px 1px 0px #cc9f52;
-  font:normal 19px EtelkaMedium;
+  font:normal 19px 'Open Sans', Arial, sans-serif;
   padding:15px 30px;
   cursor:pointer;
   white-space:normal
@@ -123,7 +123,7 @@ p.tight
 
 .donate-link
 {
-  font:normal 15px EtelkaMedium;
+  font:normal 15px 'Open Sans', Arial, sans-serif;
   background:none;
   border:0;
   padding:0;
@@ -275,7 +275,7 @@ body.login
 /* Main menu */
 #main-menu select.selectnav
 {
-  font-family:EtelkaMedium
+  font-family:'Open Sans', Arial, sans-serif
 }
 
 #navigation-menu ul.sf-menu > li
@@ -483,7 +483,7 @@ a.read-more-align-left span,a.read-more-align-right span
 .fts-jal-fb-group-display,.fts-jal-fb-group-header-desc,.fts-twitter-div
 {
   overflow:hidden;
-  font:normal 15px EtelkaMedium
+  font:normal 15px 'Open Sans', Arial, sans-serif
 }
 
 .fts-jal-fb-message,.fts-twitter-text
@@ -516,7 +516,7 @@ a.read-more-align-left span,a.read-more-align-right span
 
 #signup-heading p
 {
-  font:normal 15px EtelkaMedium;
+  font:normal 15px 'Open Sans', Arial, sans-serif;
   color:#fff;
   padding:0
 }
@@ -564,7 +564,7 @@ a.read-more-align-left span,a.read-more-align-right span
 
 #ncca-newsletter .with_frm_style .frm_message,.with_frm_style .frm_error_style
 {
-  font:normal 15px EtelkaMedium;
+  font:normal 15px 'Open Sans', Arial, sans-serif;
   padding:0 10px!important
 }
 
@@ -576,8 +576,15 @@ a.read-more-align-left span,a.read-more-align-right span
 
 #ncca-newsletter .with_frm_style .frm_error
 {
-  font:normal 13px/14px EtelkaMedium!important;
+  font:normal 13px/14px 'Open Sans', Arial, sans-serif!important;
   color:#fff!important
+}
+
+/* Fundraising order form */
+.with_frm_style label.frm_primary_label
+{
+  font-size:13px!important;
+  font-weight:normal!important
 }
 
 /* Home page */
@@ -647,7 +654,7 @@ a.read-more-align-left span,a.read-more-align-right span
 
 .home a.read-more-align-left span,a.read-more-align-right span
 {
-  font:normal 12px EtelkaMedium
+  font:normal 12px 'Open Sans', Arial, sans-serif
 }
 
 /* Home page - mobile */
@@ -677,7 +684,7 @@ a.read-more-align-left span,a.read-more-align-right span
 
 .wpdonations-form,.wpdonations-form input[type=text],.wpdonations-form,.wpdonations-form input[type=email],.wpdonations-form select,.wpdonations-form text-area,.wpdonations-error
 {
-  font:normal 15px EtelkaMedium
+  font:normal 15px 'Open Sans', Arial, sans-serif
 }
 
 .wpdonations-form input[type=text],.wpdonations-form input[type=email],.wpdonations-form select,.wpdonations-form text-area
@@ -771,19 +778,23 @@ a.read-more-align-left span,a.read-more-align-right span
 /* WooCommerce */
 .woocommerce-ordering select
 {
-  font:normal 15px EtelkaMedium
+  font:normal 15px 'Open Sans', Arial, sans-serif
 }
 
 /* Footer widgets */
-#bottom .widget_nav_menu li,#bottom .widget_nav_menu li a,.custom-formatting li,.custom-formatting li a,#bottom .loginform li,#bottom .loginform li a
+#bottom .widget_nav_menu li,#bottom .widget_nav_menu li a,#bottom .widget_nav_menu li a:before,.custom-formatting li,.custom-formatting li a,#bottom .loginform li,#bottom .loginform li a,#bottom .loginform li a:before
 {
   background:none!important;
+  content:none;
+  list-style:none;
+  margin-left:0
 }
 
 #bottom .widget_nav_menu li a,#bottom .custom-formatting li a,.bottom-col-title,#bottom .loginform li a
 {
   color:#ccc!important;
-  padding-left:0
+  padding-left:0;
+  padding-bottom:0
 }
 
 .bottom-col-title
@@ -804,7 +815,7 @@ a.read-more-align-left span,a.read-more-align-right span
 .form-row input.input-text
 {
  color:#455560!important;
- font:normal 15px EtelkaMedium
+ font:normal 15px 'Open Sans', Arial, sans-serif
 }
 
 /* Footer */
