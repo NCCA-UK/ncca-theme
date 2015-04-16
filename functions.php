@@ -23,6 +23,15 @@ add_action('wp_enqueue_scripts', 'ncca_load_scripts');
 
 
 /**
+ * Add support for Google Fonts
+ */
+function ncca_load_fonts() {
+	echo "<link href='http://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>";
+}
+add_action( 'wp_head', 'ncca_load_fonts' );
+
+
+/**
  * Add support for post thumbnails
  */
 function ncca_theme_setup() {
