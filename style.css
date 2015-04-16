@@ -436,7 +436,7 @@ a.read-more-align-left span,a.read-more-align-right span
   margin:11px 14px 2px 0
 }
 
-.appeal .custom-frame img,.journey .custom-frame img
+.appeal .custom-frame img,.journey .custom-frame img,.in-memory .custom-frame img,.wishes .custom-frame img
 {
   border-radius:75px
 }
