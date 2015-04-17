@@ -139,7 +139,7 @@ p.tight
 {
   position:absolute;
   right:22px;
-  top:42px
+  top:80px
 }
 
 /* Buttons - mobile */
@@ -387,22 +387,22 @@ ul.sub-menu
   white-space:normal!important
 }
 
-.tp-leftarrow
+.home .tp-leftarrow
 {
   background:url(/wp-content/uploads/2014/01/rev-arrow-left.jpg) no-repeat 0 0 rgba(0,0,0,0)!important
 }
 
-.tp-rightarrow
+.home .tp-rightarrow
 {
   background:url(/wp-content/uploads/2014/01/rev-arrow-right.jpg) no-repeat 0 0 rgba(0,0,0,0)!important
 }
 
-.tp-bullets.simplebullets.round .bullet,.tp-bullets.simplebullets.round .bullet:hover
+.home .tp-bullets.simplebullets.round .bullet,.home .tp-bullets.simplebullets.round .bullet:hover
 {
   background:url(/wp-content/uploads/2014/01/bullet-lilac.jpg) no-repeat left top #fff
 }
 
-.tp-bullets.simplebullets.round .bullet.selected
+.home .tp-bullets.simplebullets.round .bullet.selected
 {
   background:url(/wp-content/uploads/2014/01/bullet-purple.jpg) no-repeat left -1px #fff
 }
@@ -665,6 +665,22 @@ a.read-more-align-left span,a.read-more-align-right span
   }
 }
 
+/* Slide toggle (FAQ's) */
+.slide_toggle a
+{
+  font-size:13px
+}
+
+.slide_toggle_content
+{
+  padding:20px
+}
+
+.slide_toggle_content p
+{
+  font-size:13px
+}
+
 /* Donations */
 .pagetitle.donate
 {
@@ -693,9 +709,14 @@ a.read-more-align-left span,a.read-more-align-right span
   padding:10px;
 }
 
-.wpdonations-form fieldset
+.wpdonations-form input[type=email]
 {
-  line-height:1.4em
+  width:100%
+}
+
+.wpdonations-form .fieldset-anonymous_donation
+{
+  line-height:1.6em
 }
 
 .wpdonations-form fieldset.fieldset-donation_campaign,.wpdonations-form fieldset.fieldset-campaign_title
