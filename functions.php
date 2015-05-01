@@ -41,6 +41,20 @@ add_action( 'after_setup_theme', 'ncca_theme_setup' );
 
 
 /**
+ * Add featured image to RSS feed
+ */
+function ncca_featured_rss( $content ) {
+	global $post;
+	if( has_post_thumbnail( $post->ID ) ) {
+		$content = '<div>' . get_the_post_thumbnail( $post->ID, 'medium' ) . '</div>' . $content;
+	}
+	return $content;
+}
+add_filter( 'the_excerpt_rss', 'ncca_featured_rss' );
+add_filter( 'the_content_feed', 'ncca_featured_rss' );
+
+
+/**
  * Add favicon to header
  */
 function ncca_add_favicon() {
@@ -137,4 +151,5 @@ function ncca_backtotop_single() {
 		<div class="top-of-page"><a href="#top" title="' . esc_html__("Back to Top", "udesign") . '"><img src="' . get_stylesheet_directory_uri() . '/images/back-to-top.gif" /></a></div>';
 }
 add_action( 'udesign_single_post_entry_bottom', 'ncca_backtotop_single' );
+
 ?>
