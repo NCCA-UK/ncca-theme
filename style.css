@@ -79,6 +79,11 @@ p.tight
   background-color:#fff
 }
 
+.widget li
+{
+  list-style:none!important;
+}
+
 /* General - mobile */
 @media screen and (max-width:719px) {
   #bottom-bg
@@ -142,12 +147,28 @@ p.tight
   top:80px
 }
 
-/* Buttons - mobile */
-@media screen and (max-width:479px)
+#donate-now
 {
-  .button.right
+  position:absolute;
+  right:30%;
+  width:200px;
+  z-index:102
+}
+
+/* Buttons - mobile */
+@media screen and (max-width:1199px)
+{
+  #donate-now
   {
-    position:inherit
+    right:39%;
+  }
+}
+
+@media screen and (max-width:719px)
+{
+  #donate-now
+  {
+    left:0;
   }
 }
 
@@ -173,16 +194,29 @@ body.login
   width:300px
 }
 
-#top-elements .social_media_top
+/* Header - mobile */
+@media screen and (max-width:1199px)
 {
-  margin-top:-7px
+  #slogan
+  {
+    display:none
+  }
+}
+
+@media screen and (max-width:719px)
+{
+  #logo
+  {
+    margin-top:175px
+  }
 }
 
 /* Header menu */
 #flyout
 {
-  float:right;
-  margin-top:10px
+  position:absolute;
+  right:0;
+  z-index:101
 }
 
 #flyout a
@@ -493,7 +527,23 @@ a.read-more-align-left span,a.read-more-align-right span
 
 .fts-jal-fb-user-name
 {
-  color:#666;
+  color:#666
+}
+
+.fts-jal-fb-description-wrap
+{
+  color:inherit
+}
+
+.fts-jal-fb-picture,.jal-fb-caption
+{
+  display:none 
+}
+
+.fts-jal-fb-name,.fts-jal-fb-description-wrap p,.fts-jal-fb-message p
+{
+  font-size:13px;
+  line-height:17px
 }
 
 /* Social links */
