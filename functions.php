@@ -27,12 +27,13 @@ add_action('wp_enqueue_scripts', 'ncca_load_scripts');
  */
 function ncca_load_fonts() {
 	echo "<link href='http://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>";
+	echo "<link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,400,300,600,700,800' rel='stylesheet' type='text/css'>";
 }
 add_action( 'wp_head', 'ncca_load_fonts' );
 
 
 /**
- * Add support for post thumbnails
+ * Add support for post type thumbnails
  */
 function ncca_theme_setup() {
 	add_theme_support( 'post-thumbnails', array( 'post', 'page', 'appeal', 'journey', 'in-memory', 'wishes' ) );
@@ -88,28 +89,106 @@ add_action( 'login_enqueue_scripts', 'ncca_login_style' );
 
 
 /**
- * Header flyout menu
+ * Hide admin bar for non-admins or managers
+ */
+if( current_user_can( 'subscriber' ) || current_user_can( 'contributor' ) || current_user_can( 'customer' ) ) {
+	add_filter( 'show_admin_bar', '__return_false' );
+}
+
+
+/**
+ * Remove U-Design sidebars
+ */
+function ncca_remove_sidebars(){
+	unregister_sidebar( 'sidebar-17' );
+	unregister_sidebar( 'sidebar-18' );
+	unregister_sidebar( 'sidebar-19' );
+	unregister_sidebar( 'sidebar-20' );
+	unregister_sidebar( 'sidebar-21' );
+	unregister_sidebar( 'sidebar-22' );
+	unregister_sidebar( 'sidebar-23' );
+}
+add_action( 'widgets_init', 'ncca_remove_sidebars', 11 );
+
+
+/**
+ * Register sidebars for Children, Get Involved and Events pages
+ */
+function ncca_register_sidebars() {
+	register_sidebar( array(
+		'name'          => __( 'Children Sidebar', 'ncca_udesign' ),
+		'id'            => 'children',
+		'description'   => 'Sidebar for the Appeal, Journey, In Memory and Wishes pages',
+		'class'         => 'children-sidebar',
+		'before_widget' => '<div id="%1$s" class="widget %2$s">',
+		'after_widget'  => '</div>',
+		'before_title'  => '<h3 class="widgettitle">',
+		'after_title'   => '</h3>'
+		)
+	);
+	register_sidebar( array(
+		'name'          => __( 'Alfie\'s Wishes Sidebar', 'ncca_udesign' ),
+		'id'            => 'alfies-wishes',
+		'description'   => 'Sidebar for the Alfie\'s Wishes page',
+		'class'         => 'alfies-wishes-sidebar',
+		'before_widget' => '<div id="%1$s" class="widget %2$s">',
+		'after_widget'  => '</div>',
+		'before_title'  => '<h3 class="widgettitle">',
+		'after_title'   => '</h3>'
+		)
+	);
+	register_sidebar( array(
+		'name'          => __( 'Get Involved Sidebar', 'ncca_udesign' ),
+		'id'            => 'get-involved',
+		'description'   => 'Sidebar for Get Involved pages',
+		'class'         => 'get-involved-sidebar',
+		'before_widget' => '<div id="%1$s" class="widget %2$s">',
+		'after_widget'  => '</div>',
+		'before_title'  => '<h3 class="widgettitle">',
+		'after_title'   => '</h3>'
+		)
+	);
+	register_sidebar( array(
+		'name'          => __( 'Events Sidebar', 'ncca_udesign' ),
+		'id'            => 'events',
+		'description'   => 'Sidebar for Events pages',
+		'class'         => 'events-sidebar',
+		'before_widget' => '<div id="%1$s" class="widget %2$s">',
+		'after_widget'  => '</div>',
+		'before_title'  => '<h3 class="widgettitle">',
+		'after_title'   => '</h3>'
+		)
+	);
+}
+add_action( 'widgets_init', 'ncca_register_sidebars' );
+
+
+/**
+ * Fixed nav bar
  */
 function ncca_header_menu() {
 	echo '
-		<div id="flyout">
-			<div id="flyout-search">
-			<form role="search" method="get" id="searchform" action="' . $_SERVER['PHP_SELF'] . '" _lpchecked="1">
-				<div><label style="display:none" class="screen-reader-text" for="s">Search for:</label>
-					<input type="text" value="" name="s" id="s" placeholder="Type here to search">
-					<input type="submit" id="searchsubmit" value="">
+		<div class="fixed-nav-bar">
+			<div class="wrapper">
+				<div class="shop">
+					<p><a class="shop-button" href="/shop/"><img src="/wp-content/themes/ncca/images/shopping-cart-32.png" /> Online shop</a></p>
 				</div>
-			</form>
-			</div>
-			<div id="flyout-email">
-				<a class="flyout-email" href="mailto:info@ncca-uk.org" title="Email us: info@ncca-uk.org"><span class="flyout">Email us: info@ncca-uk.org</span></a>
-			</div>
-			<div id="flyout-shop">
-				<a class="flyout-shop" href="/shop/" title="Visit our online shop"><span class="flyout">Visit our online shop</span></a>
+				<div class="cta">
+					<p><a class="donate-button" href="/donate/">Donate Now</a></p>
+				</div>
+				<div class="search">
+				<img src="/wp-content/themes/ncca/images/search-6-32.png" />
+				<form role="search" method="get" id="searchform" action="' . $_SERVER['PHP_SELF'] . '" _lpchecked="1">
+					<div><label style="display:none" class="screen-reader-text" for="s">Search for:</label>
+						<input type="text" value="" name="s" id="s" placeholder="Search">
+						<input type="submit" id="searchsubmit" value="">
+					</div>
+				</form>
+				</div>
 			</div>
 		</div>';
 }
-add_action( 'udesign_top_wrapper_top', 'ncca_header_menu' );
+//add_action( 'udesign_body_top', 'ncca_header_menu' );
 
 
 /**
