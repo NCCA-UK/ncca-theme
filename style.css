@@ -41,7 +41,13 @@ h1,h2,h3,h4,h5,h6,p,li,a
 p,li
 {
   font-size:15px;
-  line-height:23px;
+  line-height:23px
+}
+
+li
+{
+  list-style:none;
+  margin-bottom:10px
 }
 
 h3,a
@@ -64,6 +70,13 @@ p.tight
   font:normal 15px 'Open Sans', Arial, sans-serif
 }
 
+.purple-highlight {
+  background-color:#9c6c9d;
+  color:#fff;
+  border-radius:5px;
+  padding:5px 10px
+}
+
 #top-wrapper,#bottom-bg,#footer-bg
 {
   background-color:#9c6c9d
@@ -71,6 +84,7 @@ p.tight
 
 #wrapper-1
 {
+  /*margin-top: 54px;*/
   background-color:#fff
 }
 
@@ -205,85 +219,49 @@ body.login
 
 @media screen and (max-width:719px)
 {
-  #logo
-  {
-    margin-top:175px
-  }
+  
 }
 
 /* Header menu */
-#flyout
-{
-  position:absolute;
-  right:0;
-  z-index:101
+.fixed-nav-bar {
+  padding: 10px 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 9999;
+  background: #7c3b7d;
+  border-bottom: solid 2px #fff;
+  color: #fff;
 }
 
-#flyout a
-{
-  display:block;
-  position:relative;
-  left:59px;
-  height:27px;
-  top:1px;
-  width:221px;
-  padding:8px 0;
-  text-align:center;
-  background:#7a3c7b;
-  font-size:15px;
-  color:#fff
+.fixed-nav-bar .wrapper {
+  max-width: 960px;
+  margin: 0 auto;
 }
 
-#flyout a:hover
-{
-  color:#fff!important
+.fixed-nav-bar .shop, .fixed-nav-bar .cta, .fixed-nav-bar .search {
+  display: inline-block;
+  width: 33%;
 }
 
-#flyout-shop,#flyout-email,#flyout-search
-{
-  display:block;
-  position:relative;
-  right:-221px;
-  width:280px;
-  height:50px;
+.fixed-nav-bar p, .fixed-nav-bar a, .fixed-nav-bar form, .fixed-nav-bar img {
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  vertical-align: middle;
+  color: #ffffff;
+  font-weight: 600;
 }
 
-#flyout-shop
-{
-  background:url(/wp-content/themes/ncca/images/utility-shop.jpg) 0 0 no-repeat
+.fixed-nav-bar a:hover {
+  color: #ffffff;
 }
 
-#flyout-email
+.fixed-nav-bar .search #s
 {
-  background:url(/wp-content/themes/ncca/images/utility-email.jpg) 0 0 no-repeat
-}
-
-#flyout-search
-{
-  background:url(/wp-content/themes/ncca/images/utility-search.jpg) 0 0 no-repeat
-}
-
-#flyout-shop:hover,#flyout-email:hover,#flyout-search:hover
-{
-  right:0;
-  color:#fff
-}
-
-#flyout #searchform
-{
-  position:relative;
-  left:59px;
-  top:2px;
-  height:40px;
-  padding-top:3px;
-  padding-left:3px;
-  background:#7a3c7b
-}
-
-#flyout #s
-{
-  width:196px;
-  margin-top:4px;
+  width: 200px;
   padding:2px 8px;
   font:inherit;
   font-size:15px;
@@ -291,20 +269,17 @@ body.login
   border-radius:2px
 }
 
-#flyout #searchsubmit
+.fixed-nav-bar .search #searchsubmit
 {
   position:relative;
-  top:3px;
+  top:2px;
   right:31px;
   width:25px;
   background:url(/wp-content/themes/ncca/images/arrow-trans.gif) no-repeat center right;
-  border:0
-}
-
-#flyout #searchsubmit
-{
+  border:0;
   cursor:pointer
 }
+
 
 /* Main menu */
 #main-menu select.selectnav
@@ -458,6 +433,14 @@ a.read-more-align-left span,a.read-more-align-right span
   font:inherit
 }
 
+.terms p,.terms li,.slide_toggle_content li {
+  font-size:13px
+}
+
+.terms li,.slide_toggle_content li {
+  list-style:disc
+}
+
 /* Sidebar */
 #sidebarSubnav h3
 {
@@ -518,6 +501,12 @@ a.read-more-align-left span,a.read-more-align-right span
 {
   overflow:hidden;
   font:normal 15px 'Open Sans', Arial, sans-serif
+}
+
+.fts-twitter-div .twitter-social-btn-top
+{
+  float: left;
+  margin-right: 10px;
 }
 
 .fts-jal-fb-message,.fts-twitter-text
@@ -595,11 +584,10 @@ a.read-more-align-left span,a.read-more-align-right span
 {
   margin-bottom:10px!important
 }
-
+/*
 #ncca-newsletter .frm_submit
 {
   position:relative;
-/*this needs to be absolute but needs different reference*/
   bottom:73px;
   left:212px
 }
@@ -611,10 +599,9 @@ a.read-more-align-left span,a.read-more-align-right span
   background:url(/wp-content/themes/ncca/images/arrow-trans.gif) no-repeat center right!important;
   box-shadow:none!important;
 }
-
-#ncca-newsletter .with_frm_style .frm_message,.with_frm_style .frm_error_style
+*/
+#ncca-newsletter .with_frm_style .frm_message
 {
-  font:normal 15px 'Open Sans', Arial, sans-serif;
   padding:0 10px!important
 }
 
@@ -626,7 +613,6 @@ a.read-more-align-left span,a.read-more-align-right span
 
 #ncca-newsletter .with_frm_style .frm_error
 {
-  font:normal 13px/14px 'Open Sans', Arial, sans-serif!important;
   color:#fff!important
 }
 
@@ -656,7 +642,7 @@ a.read-more-align-left span,a.read-more-align-right span
 
 .home ul.small-thumb li
 {
-  min-height:480px;
+  min-height:450px;
   margin-bottom:40px;
   padding:0;
   background:#fff;
@@ -850,6 +836,43 @@ a.read-more-align-left span,a.read-more-align-right span
 .woocommerce-ordering select
 {
   font:normal 15px 'Open Sans', Arial, sans-serif
+}
+
+/* Prize Draw */
+.prize-draw {
+  text-align: center;
+  padding: 10px 20px;
+  background: #eee;
+  border-radius: 8px;
+}
+
+.wp-social-login-provider-list {
+  margin:20px 0;
+  padding:0
+}
+
+#frm_form_24_container input[type=submit], .wp-social-login-provider-facebook {
+  -webkit-border-radius: 4;
+  -moz-border-radius: 4;
+  border-radius: 4px;
+  border: 0;
+  font-family: Arial;
+  color: #ffffff;
+  font-size: 15px;
+  background: #3498db;
+  margin-top: 18px;
+  padding: 10px 30px;
+  text-decoration: none;
+}
+
+#frm_form_24_container input[type=submit]:hover, .wp-social-login-provider-facebook:hover {
+  background: #3cb0fd;
+  text-decoration: none;
+  color: #ffffff!important;
+}
+
+#frm_form_24_container .frm_error_style {
+  margin: 10px 0;
 }
 
 /* Footer widgets */
